@@ -9,4 +9,6 @@ public interface ProfesRepository extends JpaRepository<Profes, Long> {
 	@Override
 	@SuppressWarnings("unchecked")
 	Profes save(Profes profes);
+
+
 }

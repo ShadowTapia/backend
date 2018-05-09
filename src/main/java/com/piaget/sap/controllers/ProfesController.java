@@ -1,6 +1,7 @@
 package com.piaget.sap.controllers;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -38,6 +39,11 @@ public class ProfesController {
 		this.profesService.save(profes);
 
 		return new RestResponse(HttpStatus.OK.value(), "Operación exitosa!");
+	}
+
+	@RequestMapping(value = "/getProfes", method = RequestMethod.GET)
+	public List<Profes> getProfes() {
+		return this.profesService.findAll();
 	}
 
 	private boolean validate(Profes profes) {
