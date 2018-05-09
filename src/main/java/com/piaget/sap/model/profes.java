@@ -9,7 +9,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "profesores")
 @Access(AccessType.FIELD)
-public class profes extends ParentEntity {
+public class Profes extends ParentEntity {
 
 	private static final long serialVersionUID = 1L;
 
